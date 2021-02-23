@@ -39,11 +39,11 @@ def rescaleFrame(frame, scale=0.3):
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
   
 # read a image using imread 
-img_rgb_one = cv.imread("img_1_1.jpg")    
+img_one = cv.imread("img_1_1.jpg",0)    
 
-img = cv.imread("input1.jpg", 0)
+#img = cv.imread("input1.jpg", 0)
 
-img_resized_one = rescaleFrame(img) 
+img_resized_one = rescaleFrame(img_one) 
   
 # creating a Histograms Equalization 
 # of a image using cv2.equalizeHist() 
@@ -54,13 +54,14 @@ equ_one = cv.equalizeHist(img_resized_one)
 # show image input vs output 
 cv.imshow("he_1",equ_one) 
 cv.imwrite("he_1.jpg", equ_one)
-print("MAX: ",np.amax(equ_one))
+print("MAX image 1: ",np.amax(equ_one))
+print("MIN image 1: ",np.amin(equ_one))
 
-img_rgb_two = cv.imread("img_1_2.jpg")
+#img_rgb_two = cv.imread("img_1_2.jpg")
 
-img = cv.imread("input2.jpg", 0)
+img_two = cv.imread("img_1_2.jpg", 0)
 
-img_resized_two = rescaleFrame(img) 
+img_resized_two = rescaleFrame(img_two) 
   
 # creating a Histograms Equalization 
 # of a image using cv2.equalizeHist() 
@@ -70,7 +71,8 @@ equ_two = cv.equalizeHist(img_resized_two)
 # show image input vs output 
 cv.imshow("he_2",equ_two) 
 cv.imwrite("he_2.jpg", equ_two)
-print("MAX: ",np.amax(equ_two))
+print("MAX imaage 2: ",np.amax(equ_two))
+print("MIN imaage 2: ",np.amin(equ_two))
 
 distance_original_one = cv.norm(img_resized_one - img_resized_two, cv.NORM_L1)
 print(distance_original_one)

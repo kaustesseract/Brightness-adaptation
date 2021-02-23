@@ -15,9 +15,9 @@ def rescaleFrame(frame, scale=0.3):
   
 # path to input image is specified and   
 # image is loaded with imread command  
-image1 = cv2.imread('input1.jpg')  
+image1 = cv2.imread('img_1_1.jpg')  
 image1 = rescaleFrame(image1)
-image2 = cv2.imread('input2.jpg')
+image2 = cv2.imread('img_1_2.jpg')
 image2 = rescaleFrame(image2)
 # cv2.cvtColor is applied over the 
 # image input with applied parameters 
@@ -56,46 +56,54 @@ cv2.imwrite('s_th_thresh_tozeroi_1.jpg', thresh5_img1)
 
 cv2.imshow('s_th_thresh_tozeroi_2', thresh5_img2) 
 cv2.imwrite('s_th_thresh_tozeroi_2.jpg', thresh5_img2)
-"""
-threshbo_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
-print(threshbo_L1)
-threshbo_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
-print(threshbo_L2)
-thresh_L1 = cv2.norm(thresh1_img1 - thresh1_img2, cv2.NORM_L1)
-print(thresh_L1)
 
-thresh_L2 = cv2.norm(thresh1_img1 - thresh1_img2, cv2.NORM_L2)
-print(thresh_L2)
-
-
-threshibo_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
-print(threshibo_L1)
-threshibo_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
-print(threshibo_L2)
-thresh_L1 = cv2.norm(thresh2_img1 - thresh2_img2, cv2.NORM_L1)
-print(thresh_L1)
-thresh_L2 = cv2.norm(thresh2_img1 - thresh2_img2, cv2.NORM_L2)
-print(thresh_L2)
+threshb_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
+print("L1 distance of before normalization: ",threshb_L1)
+threshb_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
+print("L2 distance of before normalization: ",threshb_L2)
+threshb_L1 = cv2.norm(thresh1_img1 - thresh1_img2, cv2.NORM_L1)
+print("L1 distance of after normalization: ",threshb_L1)
+threshb_L2 = cv2.norm(thresh1_img1 - thresh1_img2, cv2.NORM_L2)
+print("L2 distance of after normalization: ",threshb_L2)
 
 
-threshibo_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
-print(threshibo_L1)
-threshibo_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
-print(threshibo_L2)
-thresh_L1 = cv2.norm(thresh3_img1 - thresh3_img2, cv2.NORM_L1)
-print(thresh_L1)
-thresh_L2 = cv2.norm(thresh3_img1 - thresh3_img2, cv2.NORM_L2)
-print(thresh_L2)
-"""
+threshbi_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
+print("L1 distance of before normalization: ",threshbi_L1)
+threshbi_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
+print("L2 distance of before normalization: ",threshbi_L2)
+threshbi_L1 = cv2.norm(thresh2_img1 - thresh2_img2, cv2.NORM_L1)
+print("L1 distance of after normalization: ",threshbi_L1)
+threshbi_L2 = cv2.norm(thresh2_img1 - thresh2_img2, cv2.NORM_L2)
+print("L2 distance of after normalization: ",threshbi_L2)
 
-threshibo_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
-print(threshibo_L1)
-threshibo_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
-print(threshibo_L2)
-thresh_L1 = cv2.norm(thresh5_img1 - thresh5_img2, cv2.NORM_L1)
-print(thresh_L1)
-thresh_L2 = cv2.norm(thresh5_img1 - thresh5_img2, cv2.NORM_L2)
-print(thresh_L2)
+
+thresht_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
+print("L1 distance of before normalization: ",thresht_L1)
+thresht_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
+print("L2 distance of before normalization: ",thresht_L2)
+thresht_L1 = cv2.norm(thresh3_img1 - thresh3_img2, cv2.NORM_L1)
+print("L1 distance of after normalization: ",thresht_L1)
+thresht_L2 = cv2.norm(thresh3_img1 - thresh3_img2, cv2.NORM_L2)
+print("L2 distance of after normalization: ",thresht_L2)
+
+threshtz_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
+print("L1 distance of before normalization: ",threshtz_L1)
+threshtz_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
+print("L2 distance of before normalization: ",threshtz_L2)
+threshtz_L1 = cv2.norm(thresh4_img1 - thresh4_img2, cv2.NORM_L1)
+print("L1 distance of after normalization: ",threshtz_L1)
+threshtz_L2 = cv2.norm(thresh4_img1 - thresh4_img2, cv2.NORM_L2)
+print("L2 distance of after normalization: ",threshtz_L2)
+
+
+threshtzi_L1 = cv2.norm(image1 - image2, cv2.NORM_L1)
+print("L1 distance of before normalization: ",threshtzi_L1)
+threshtzi_L2 = cv2.norm(image1 - image2, cv2.NORM_L2)
+print("L2 distance of before normalization: ",threshtzi_L2)
+threshtzi_L1 = cv2.norm(thresh5_img1 - thresh5_img2, cv2.NORM_L1)
+print("L1 distance of after normalization: ",threshtzi_L1)
+threshtzi_L2 = cv2.norm(thresh5_img1 - thresh5_img2, cv2.NORM_L2)
+print("L2 distance of after normalization: ",threshtzi_L2)
 
 #cv2.imshow('Set to 0 Inverted', thresh5) 
 cv2.waitKey(0)

@@ -30,6 +30,8 @@ norm_image_1 = min_max_normalization(original_image_1) # getting the normalized 
 cv.imshow('Normalized Image 1', norm_image_1) # dispayling the image
 cv.imwrite('norm_image_1.jpg', norm_image_1) # writing the image
 print("MAX value of image 1: ", np.amax(norm_image_1)) # displaying the max value of the image 1
+print("MIN value of image 1: ", np.amin(norm_image_1)) # displaying the max value of the image 1
+
 
 original_image_2 = cv.imread("img_1_2.jpg", cv.IMREAD_COLOR)  # reading image
 original_image_2 = rescaleFrame(original_image_2) # rescaling the image
@@ -37,16 +39,17 @@ norm_image_2 = min_max_normalization(original_image_2) # getting the normalized 
 
 cv.imshow('Normalized Image 2', norm_image_2) # dispayling the image
 cv.imwrite('norm_image_2.jpg', norm_image_2) # writing the image
-print("MAX value of image 2: ",np.amax(norm_image_1)) # displaying the max value of the image 2
+print("MAX value of image 2: ",np.amax(norm_image_2)) # displaying the max value of the image 2
+print("MIN value of image 2: ",np.amin(norm_image_2)) # displaying the max value of the image 2
 
 
-original_image_L1 = cv.norm(original_image_1*255 - original_image_2*255, cv.NORM_L1) # calculating L1 for original image
+original_image_L1 = cv.norm(original_image_1 - original_image_2, cv.NORM_L1) # calculating L1 for original image
 print("L1 distance of before normalization: ",original_image_L1)
-original_image_L2 = cv.norm(original_image_1*255 - original_image_2*255, cv.NORM_L2) # calculating L1 for original image
+original_image_L2 = cv.norm(original_image_1 - original_image_2, cv.NORM_L2) # calculating L1 for original image
 print("L2 distance of before normalization: ",original_image_L2)
-normalised_image_L1 = cv.norm(norm_image_1*255 - norm_image_2*255, cv.NORM_L1) # calculating L1 for normalized image
+normalised_image_L1 = cv.norm(norm_image_1 - norm_image_2, cv.NORM_L1) # calculating L1 for normalized image
 print("L1 distance of after normalization: ",normalised_image_L1)
-normalised_image_L2 = cv.norm(norm_image_1*255 - norm_image_2*255, cv.NORM_L2) # calculating L2 for normalized image
+normalised_image_L2 = cv.norm(norm_image_1 - norm_image_2, cv.NORM_L2) # calculating L2 for normalized image
 print("L2 distance of after normalization: ",normalised_image_L2)
 
 
