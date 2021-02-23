@@ -17,7 +17,7 @@ def rescaleFrame(frame, scale=0.3):
 def mean_std(normalizing_image):
     normalizing_image -= normalizing_image.mean() # calculting the minus of mean of the image
     normalizing_image /= normalizing_image.std() # dividing it with standard deviation
-    normalized_image = normalizing_image
+    normalized_image = normalizing_image.astype(np.uint8)
     return normalized_image
 
 #image = cv2.imread('../data/Lena.png').astype(np.float32) / 255
