@@ -15,21 +15,21 @@ def rescaleFrame(frame, scale=0.3):
     
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
-img_1 = cv.imread('input1.jpg',0)
+img_1 = cv.imread('img_1_1.jpg',0)
 img_1 = rescaleFrame(img_1)
 img_1 = cv.medianBlur(img_1,5)
 th2_i1 = cv.adaptiveThreshold(img_1,255,cv.ADAPTIVE_THRESH_MEAN_C,\
             cv.THRESH_BINARY,11,2)
 th3_i1 = cv.adaptiveThreshold(img_1,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv.THRESH_BINARY,11,2)
-
+#print(th2_i1)
 cv.imshow('at_gauss_1', th3_i1) 
 #cv.imshow('gaussian_1', th3)
 cv.imwrite('at_gauss_1.jpg', th3_i1) 
 
 
 
-img_2 = cv.imread('input2.jpg',0)
+img_2 = cv.imread('img_1_2.jpg',0)
 img_2 = rescaleFrame(img_2)
 img_2 = cv.medianBlur(img_2,5)
 
@@ -38,8 +38,8 @@ th2_i2 = cv.adaptiveThreshold(img_2,255,cv.ADAPTIVE_THRESH_MEAN_C,\
 th3_i2 = cv.adaptiveThreshold(img_2,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv.THRESH_BINARY,11,2)
 ll = cv.cvtColor(img_2, cv.COLOR_GRAY2RGB)
-cv.imshow('at_gauss_2', img_2) 
-cv.imwrite('at_gauss_2.jpg', th3_i2) 
+#cv.imshow('at_gauss_2', img_2) 
+#cv.imwrite('at_gauss_2.jpg', th3_i2) 
 
 """
 threshibo_L1 = cv.norm(img_1 - img_2, cv.NORM_L1)

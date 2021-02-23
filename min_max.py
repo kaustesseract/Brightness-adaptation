@@ -23,7 +23,7 @@ def min_max_normalization(image):
     
 
 
-original_image_1 = cv.imread("in1.jpg", cv.IMREAD_COLOR)  # reading image
+original_image_1 = cv.imread("img_1_1.jpg", cv.IMREAD_COLOR)  # reading image
 original_image_1 = rescaleFrame(original_image_1) # rescaling the image
 norm_image_1 = min_max_normalization(original_image_1) # getting the normalized image
 
@@ -31,7 +31,7 @@ cv.imshow('Normalized Image 1', norm_image_1) # dispayling the image
 cv.imwrite('norm_image_1.jpg', norm_image_1) # writing the image
 print("MAX value of image 1: ", np.amax(norm_image_1)) # displaying the max value of the image 1
 
-original_image_2 = cv.imread("in2.jpg", cv.IMREAD_COLOR)  # reading image
+original_image_2 = cv.imread("img_1_2.jpg", cv.IMREAD_COLOR)  # reading image
 original_image_2 = rescaleFrame(original_image_2) # rescaling the image
 norm_image_2 = min_max_normalization(original_image_2) # getting the normalized image
 

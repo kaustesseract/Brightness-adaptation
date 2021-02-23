@@ -17,11 +17,11 @@ def rescaleFrame(frame, scale=0.3):
 def mean_std(normalizing_image):
     normalizing_image -= normalizing_image.mean() # calculting the minus of mean of the image
     normalizing_image /= normalizing_image.std() # dividing it with standard deviation
-    normalized_image = normalizing_image.astype(np.uint8)
+    normalized_image = normalizing_image.astype(np.uint8)*255
     return normalized_image
 
 #image = cv2.imread('../data/Lena.png').astype(np.float32) / 255
-image_1 = cv.imread("input1.jpg").astype(np.float64) / 255 # reading the image and converting into float values
+image_1 = cv.imread("img_1_1.jpg").astype(np.float64) / 255 # reading the image and converting into float values
 original_image_resized_1 = rescaleFrame(image_1) # rescaling the image
 normalizing_image_1 = rescaleFrame(image_1)
 
@@ -33,7 +33,7 @@ cv.imwrite("mean_std_1.jpg", normalized_image_1) # writing the image
 print("MAX: ",np.amax(normalized_image_1)) # calculating the max value of the image 1
 
 
-image_2 = cv.imread("input2.jpg").astype(np.float64) / 255  # reading the image and converting into float values
+image_2 = cv.imread("img_1_2.jpg").astype(np.float64) / 255  # reading the image and converting into float values
 original_image_resized_2 = rescaleFrame(image_2) # rescaling the image
 normalizing_image_2 = rescaleFrame(image_2)
 

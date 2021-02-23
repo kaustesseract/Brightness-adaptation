@@ -76,7 +76,7 @@ def rescaleFrame(frame, scale=0.3):
 
 
 
-image_1 = cv2.imread('input1.jpg')
+image_1 = cv2.imread('img_1_1.jpg')
 image_1 = rescaleFrame(image_1)
 auto_result_1, alpha_1, beta_1 = automatic_brightness_and_contrast(image_1)
 #print('alpha', alpha_1)
@@ -85,7 +85,7 @@ cv2.imshow('sa_1', auto_result_1)
 cv2.imwrite('sa.png', auto_result_1)
 
 
-image_2 = cv2.imread('input2.jpg')
+image_2 = cv2.imread('img_1_2.jpg')
 image_2 = rescaleFrame(image_2)
 auto_result_2, alpha_2, beta_2 = automatic_brightness_and_contrast(image_2)
 #print('alpha', alpha_2)
