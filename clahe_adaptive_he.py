@@ -9,7 +9,7 @@ import cv2
 import numpy as np 
   
 # Reading the image from the present directory 
-image = cv2.imread("img_1_1.jpg") 
+image = cv2.imread("img_4_1.jpg") 
 # Resizing the image for compatibility 
 image = cv2.resize(image, (500, 600)) 
   
@@ -29,7 +29,7 @@ final_img = clahe.apply(image_bw) + 30
 #cv2.imshow("ordinary threshold", ordinary_img) 
 cv2.imshow("CLAHE image", final_img)
 
-image2 = cv2.imread("img_1_2.jpg") 
+image2 = cv2.imread("img_4_2.jpg") 
 # Resizing the image for compatibility 
 image2 = cv2.resize(image2, (500, 600)) 
   

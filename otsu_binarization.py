@@ -17,7 +17,7 @@ def rescaleFrame(frame, scale=0.3):
 
 
 
-img_1 = cv.imread('img_1_1.jpg',0)
+img_1 = cv.imread('img_5_1.jpg',0)
 img_1 = rescaleFrame(img_1)
 # global thresholding
 
@@ -30,7 +30,7 @@ cv.imwrite("th1_otsu.jpg",th1_otsu)
 #cv.imshow("th3",th3)
 
 
-img_2 = cv.imread('img_1_2.jpg',0)
+img_2 = cv.imread('img_5_2.jpg',0)
 img_2 = rescaleFrame(img_2)
 # global thresholding
 # Otsu's thresholding

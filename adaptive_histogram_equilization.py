@@ -22,14 +22,14 @@ def clahe(image):
     out = clahe.apply(image)
     return out
 # Load the image in greyscale
-img1 = cv2.imread('img_1_1.jpg',0)
+img1 = cv2.imread('img_5_1.jpg',0)
 img1 = rescaleFrame(img1)
 out1 = clahe(img1)
 cv2.imshow('a1',out1)
 cv2.imwrite('ahe_1.jpg',out1)
 
 
-img2 = cv2.imread('img_1_2.jpg',0)
+img2 = cv2.imread('img_5_2.jpg',0)
 img2 = rescaleFrame(img2)
 out2 = clahe(img2) 
 cv2.imshow('a2',out2)
